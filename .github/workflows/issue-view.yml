@@ -1,4 +1,4 @@
-name: github cli manual trigger
+name: gh issue view
 on:
   workflow_dispatch:
     inputs:
@@ -9,13 +9,6 @@ env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
-  issueList:
-    name: List issues
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - run: gh issue list
   issueView:
     name: View an issue
     runs-on: ubuntu-latest
