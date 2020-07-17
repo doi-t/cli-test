@@ -2,9 +2,6 @@ name: gh issue list
 on:
   workflow_dispatch
 
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 jobs:
   issueList:
     name: List issues
