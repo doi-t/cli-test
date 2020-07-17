@@ -1,0 +1,15 @@
+name: github cli manual trigger
+on:
+  workflow_dispatch:
+    inputs:
+      issueNumber:
+        description: 'Issue number'
+
+env:
+  GITHUB_TOKEN: {{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  issueList:
+    runs-on: ubuntu-latest
+    steps:
+    - run: gh issue list
