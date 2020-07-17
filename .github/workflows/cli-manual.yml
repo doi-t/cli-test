@@ -5,12 +5,12 @@ on:
       issueNumber:
         description: 'Issue number'
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   issueList:
     name: List issues
-    env:
-      GITHUB_TOKEN: {{ secrets.GITHUB_TOKEN }}
     runs-on: ubuntu-latest
     steps:
     - run: gh issue list
